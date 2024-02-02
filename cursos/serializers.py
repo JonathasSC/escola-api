@@ -5,10 +5,6 @@ from .models import Curso, Avaliacao
 class AvaliacaoSerializer(serializers.ModelSerializer):
 
     class Meta:
-        extra_kwargs = {
-            'email': {'write_only': True}
-        }
-
         model = Avaliacao
         fields = (
             'id',
@@ -21,18 +17,18 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
             'ativo'
         )
 
+    def to_representation(self, instance):
+        request = self.context.get('request')
+
+        if request and request.user.is_authenticated:
+            return super().to_representation(instance)
+        else:
+            data = super().to_representation(instance)
+            data.pop('email', None)
+            return data
+
 
 class CursoSerializer(serializers.ModelSerializer):
-    # Nested Relationship
-    # avaliacoes = AvaliacaoSerializer(many=True, read_only=True)
-
-    # HyperLinked Related Field
-    # avaliacoes = serializers.HyperlinkedRelatedField(
-    #     view_name='avaliacao-detail',
-    #     read_only=True,
-    #     many=True
-    # )
-
     # Primary Key Related Field
     avaliacoes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
