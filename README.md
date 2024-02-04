@@ -29,6 +29,8 @@
 <li>Python v3.6X
 <li>IDE de sua preferência
 
+<hr>
+
 #### :eyes:Visualizando API
 
 ##### 1. Abra um terminal
@@ -49,6 +51,8 @@ Clique com botão direito na sua área de trabalho e clique em "Abrir no termina
 
 6. `python .\manage.py runserver`
 
+<hr>
+
 ##### 3. Copie a URL da API.
 
 Após executar os comandos mencionados, verifique se o servidor foi criado e está sendo executado com sucesso. Você encontrará a confirmação indicada pela seguinte mensagem:
@@ -57,23 +61,34 @@ Após executar os comandos mencionados, verifique se o servidor foi criado e est
 
 Copie essa parte **http://127.0.0.1:8000/** , ou uma semelhante que lhe seja apresentada, para acessar o servidor localmente.
 
+<hr>
+
 ##### 4. Veja detalhes e endpoints
 
 Cole o URL previamente copiado em seu navegador de preferência e adicione **swagger/** ao final da URL.
+
+<hr>
 
 ##### 5. Mais detalhes e responses
 
 Substitua o'**swagger/** por **redoc/** ao final da URL.
 
-#### :arrow_up_small: Executando requisições para API
+<hr>
 
-Para fazer requisições na API, será necessário o servidor sendo executado enquanto utiliza um API Client.
+## :arrow_down:Utilizando
 
-Para obter acesso completo à API, é necessário incluir no cabeçalho (header) da solicitação o Token de exemplo fornecido, seguindo a seguinte estrutura: " **Token 9d59f3dcbbc79932f87838728953494530f41667** ".
+Para fazer requisições na API, será necessário o servidor sendo executado
+enquanto utiliza um API Client.
 
-Este token de autorização é essencial para autenticar e autorizar o acesso aos recursos da API.
+Para obter acesso completo à API, é necessário incluir no cabeçalho (header) da
+solicitação o Token de exemplo fornecido, seguindo a seguinte estrutura:
+" **Token 9d59f3dcbbc79932f87838728953494530f41667** ".
 
-Caso houver dificuldades de utilizar a API Client, recomendamos essas duas aplicações e seus tutoriais:
+Este token de autorização é essencial para autenticar e autorizar o acesso aos
+recursos da API.
+
+Caso houver dificuldades de utilizar a API Client, recomendamos essas duas
+aplicações e seus tutoriais:
 
 **Postman**:
 https://learning.postman.com/docs/introduction/overview/
