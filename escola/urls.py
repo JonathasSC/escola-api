@@ -10,7 +10,11 @@ schema = get_schema_view(
     openapi.Info(
         title="Escola API",
         default_version='v1.0.0',
-        description="Documentação da API para escola",
+        description='''
+        Bem-vindo à documentação da API de Gerenciamento de Cursos e Avaliações!
+        Esta API foi desenvolvida com o objetivo de proporcionar uma plataforma escalável
+        para gerenciar cursos e suas respectivas avaliações em uma plataforma de ensino virtual.
+        ''',
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="contact@snippets.local"),
         license=openapi.License(name="BSD License"),
